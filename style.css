@@ -1,14 +1,8 @@
-/*
-🎬 Video playlist UI Design like Skillshare With Vanilla JavaScript
-👨🏻‍⚕️ By: Coding Design
 
-You can do whatever you want with the code. However if you love my content, you can subscribed my YouTube Channel
-🌎link: www.youtube.com/codingdesign
-*/
 
 :root {
-    --primary : linear-gradient(to bottom right, #0a0057, #3f00ee);
-    --secondary : gold;
+    --primary : rgb(13,109,252);
+    --secondary : rgb(13,109,252);
     --text : #fff;
 }
 
@@ -21,8 +15,8 @@ You can do whatever you want with the code. However if you love my content, you 
 body {
     min-height: 100vh;
     background-image: var(--primary);
-    font-family: sans-serif;
-    color: var(--text);
+    font-family: 'Quicksand', sans-serif;
+    color: black;
 
     display: flex;
     align-items: center;
@@ -96,7 +90,8 @@ body {
 }
 
 .video-playlist .videos .video:hover {
-    background-color: #0003;
+    color: rgb(13,109,252); /* Màu sắc khi hover */
+    cursor: pointer; /* Biểu tượng con trỏ thay đổi khi hover */
 }
 
 .video-playlist .videos .video.active {
