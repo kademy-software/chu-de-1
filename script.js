@@ -15,20 +15,20 @@ let data = [
         'id': 'a2',
         'title': 'Xin lỗi',
         'name': 'l2.mp4',
-        'duration': '2:45',
+        'duration': '11 giây ',
     },
     {
         'id': 'a3',
         'title': 'Cảm ơn',
         'name': 'l3.mp4',
-        'duration': '24:49',
+        'duration': '9 giây',
     },
 
     {
         'id': 'a4',
         'title': 'Bạn thật tuyệt vời',
         'name': 'l4.mp4',
-        'duration': '3:59',
+        'duration': '4 giây',
     },
     
 
@@ -37,7 +37,7 @@ let data = [
 data.forEach((video, i) => {
     let video_element = `
                 <div class="video" data-id="${video.id}">
-                    <img src="images/play.svg" alt="">
+                   
                     <p>${i + 1 > 9 ? i + 1 : '0' + (i + 1)}. </p>
                     <h3 class="title">${video.title}</h3>
                     <p class="time">${video.duration}</p>
@@ -48,19 +48,18 @@ data.forEach((video, i) => {
 
 let videos = document.querySelectorAll('.video');
 videos[0].classList.add('active');
-videos[0].querySelector('img').src = 'images/pause.svg';
+
 
 videos.forEach(selected_video => {
     selected_video.onclick = () => {
 
         for (all_videos of videos) {
             all_videos.classList.remove('active');
-            all_videos.querySelector('img').src = 'images/play.svg';
-
+            
         }
 
         selected_video.classList.add('active');
-        selected_video.querySelector('img').src = 'images/pause.svg';
+        
 
         let match_video = data.find(video => video.id == selected_video.dataset.id);
         main_video.src = 'videos/' + match_video.name;
